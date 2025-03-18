@@ -8,7 +8,6 @@ const TodoItem = ({ todoItem, index,todos, setTodos }) => {
 
   /**
    * 
-   * @param
    * @returns {Promise<void>} "delete todo"
    */
   const handleDelete = () => {

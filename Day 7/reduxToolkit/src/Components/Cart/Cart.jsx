@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart,addToCart } from "../../Features/Cart/CartSlice";
+import { removeFromCart,addToCart,removeItemFromCart } from "../../Features/Cart/CartSlice";
 import { s25_ultra } from "../../assets/assets.js";
 
 const Cart = () => {
@@ -23,6 +23,10 @@ const Cart = () => {
     dispatch(removeFromCart(id));
    }    
   };
+
+  const handleRemoveFromCart = (id) => {
+    dispatch(removeItemFromCart(id))
+  }
 
   return (
     <div className="cart">
@@ -47,7 +51,7 @@ const Cart = () => {
                 <p>total : {cartItem.productPrice * cartItem.quantity}</p>
                 </div>
                 <div className="remove-btn">
-                <button onClick={() => handleRemoveFromCart(cartItem.productId)}>
+                <button onClick={() => handleRemoveFromCart(cartItem.id)}>
                   remove From cart
                 </button>
                 </div>

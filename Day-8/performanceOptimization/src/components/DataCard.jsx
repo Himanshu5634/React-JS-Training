@@ -2,28 +2,26 @@ import React, { useEffect, useRef, useState } from "react";
 
 const DataCard = ({ data, index }) => {
   const [load, setLoad] = useState(true);
-  
+
   const imgRef = useRef(null);
 
-
   const handleLoading = () => {
-    console.log("ok")
-    
-    setLoad(false)
-  };
-  const random = parseInt(Math.random() * 100)
+    console.log("ok");
 
+    setLoad(false);
+  };
+  const random = parseInt(Math.random() * 100);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0]
-      if(entry.isIntersecting ){
+      const entry = entries[0];
+      if (entry.isIntersecting) {
         // console.log("intersecting");
         handleLoading();
-      } 
-    })
+      }
+    });
     if (imgRef.current) {
-      observer.observe(imgRef.current)
+      observer.observe(imgRef.current);
     }
 
     return () => {
@@ -36,12 +34,11 @@ const DataCard = ({ data, index }) => {
     <div className="data-card">
       <h1>{index + 1}</h1>
       <div className="card-img">
-        {load && <div class="image-skeleton"></div>
-        }
+        {load && <div class="image-skeleton"></div>}
         <img
           ref={imgRef}
-          // src={`https://picsum.photos/200/300?success=${random}`}
-          alt={`img-${random}`}
+          src={data.image}
+          alt={data.image}
           loading="lazy"
           onLoad={() => {
             setLoad(false);

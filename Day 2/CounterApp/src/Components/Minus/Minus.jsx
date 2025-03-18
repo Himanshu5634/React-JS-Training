@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Minus.css"
+
 
 const Minus = ({count,setCount}) => {
 

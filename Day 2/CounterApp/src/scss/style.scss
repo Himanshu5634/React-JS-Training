@@ -8,19 +8,19 @@
         color: $text-color,
         border-radius: $border-radius,
     )
-}
+};
 
 @mixin button($bg,$color,$padding,$radius){
     @each $prop,$value in button-style($bg, $color, $padding, $radius){
         #{$prop} : $value
     }
-}
+};
 
 @mixin div-center($display:flex,$justifyContant:center,$alignItems:center){
     display: $display;
     justify-content: $justifyContant;
     align-items: $alignItems;
-}
+};
 
 *{
     margin: 0;
@@ -34,12 +34,12 @@ body{
 
     .container{
         @include div-center();
-        margin-bottom: 5px
-        
-        button{
-            @include button(#111,#fff ,15px ,8px );
-            font-size: 1rem;
-        }
+        margin-bottom: 5px;
+    }
+
+    button{
+        @include button(#111,#fff ,15px ,8px );
+        font-size: 1rem;
     }
 
     p{

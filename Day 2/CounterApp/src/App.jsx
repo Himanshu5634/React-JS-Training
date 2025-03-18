@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./css/styles.css";
 import Plus from "./Components/Plus/Plus";
 import Minus from "./Components/Minus/Minus";
 
@@ -25,8 +24,8 @@ function App() {
          <input type="number" name="" id="" value={count} onChange={(e) => setCount(parseInt(e.target.value))}/>
         <Plus setCount={handleCount} count={count} />
       </div>
-      <div>
-        <button onClick={() => setCount(0)}>Clear</button>
+      <div className="clear-count">
+        <button className="clear-btn" onClick={() => setCount(0)}>Clear</button>
       </div>
     </>
   );

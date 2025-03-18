@@ -10,6 +10,12 @@
     )
 }
 
+@mixin centerDiv(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin button($bg,$text,$padding,$radius){
     @each $prop,$value in button-style($bg, $text, $padding,$radius){
         #{$prop} : $value
@@ -23,20 +29,20 @@
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centerDiv();
     width: 100vw;
     height: 100vh;
 
     .form-container{
+        @include centerDiv();
+
         border: 1px solid black;
         padding: 2rem;
         width: 40vw;
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         border-radius: 8px;
     }
 

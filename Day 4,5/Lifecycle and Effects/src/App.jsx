@@ -6,11 +6,11 @@ import { StoreContaxt } from "./Context/StoreContaxt";
 
 function App() {
   
-  const {dark} = useContext(StoreContaxt)
+  const {theam} = useContext(StoreContaxt)
 
   return (
     <>
-      <div className={dark?"dark":""}>
+      <div className={theam == "dark"? "dark":""}>
       <div className={"container"}>
         <Navbar />
         <Outlet />

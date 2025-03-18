@@ -3,7 +3,7 @@ const email = document.getElementById("email")
 const password = document.getElementById("password")
 const span = document.querySelector("span")
 
-console.log("login",logIn);
+// console.log("login",logIn);
 
 
 logIn.addEventListener("click",(e) => {

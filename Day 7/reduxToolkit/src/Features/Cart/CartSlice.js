@@ -1,5 +1,4 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import { useEffect } from "react";
 
 const initialState = {
   cartItems: JSON.parse(localStorage.getItem("cart")) || [],
@@ -23,9 +22,14 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    /**
+     * @returns {Promise<void>} add the product in to cart
+     * @param {*} state 
+     * @param {*} action 
+     */
     addToCart: (state, action) => {
       try {
-        console.log(action,"adca");
+        // console.log(action,"adca");
         
         const cartItem = state.cartItems.find(
           (cartItem) => cartItem.productId === action.payload       
@@ -55,9 +59,14 @@ export const cartSlice = createSlice({
         console.log(error);
       }
     },
+    /**
+     * @return {Promise<void>} decrease the quantity of product in cart
+     * @param {*} state 
+     * @param {*} action 
+     */
     removeFromCart: (state, action) => {
       try {
-        console.log(action);
+        // console.log(action);
         
         const cartItem = state.cartItems.find(
           (cartItem) => cartItem.id == action.payload
@@ -78,10 +87,26 @@ export const cartSlice = createSlice({
         console.log(error);
       }
     },
-
+    /**
+     * @returns {Promise<void>} remove all quntity of product from cart
+     * @param {*} state 
+     * @param {*} action 
+     */
+    removeItemFromCart : (state,action) => {
+      try {
+        // console.log(action);
+        
+        state.cartItems = state.cartItems.filter(
+          (cartItem) => cartItem.id != action.payload
+        );
+      } catch (error) {
+        console.log(error);
+        
+      }
+    }
   },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart,removeItemFromCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import DataCard from "./components/dataCard";
+import posts from "./assets/data.json";
 
 function App() {
   const [data, setData] = useState([]);
@@ -9,17 +10,15 @@ function App() {
 
   const fetchData = useCallback(async () => {
     try {
-      const res = await fetch(
-        "https://microsoftedge.github.io/Demos/json-dummy-data/5MB.json"
-      );
+      // const res = await fetch("https://microsoftedge.github.io/Demos/json-dummy-data/5MB.json");
+      // const response = await res.json();
 
-      const response = await res.json();
-      setData(response);
-      setVisibleData(response.slice(0, 4)); // Render first 20 items initially
+      setData(posts);
+      setVisibleData(posts.slice(0, 4));
     } catch (error) {
       console.log(error);
     }
-  },[])
+  }, []);
 
   useEffect(() => {
     fetchData();
@@ -49,10 +48,10 @@ function App() {
     setPage(newPage);
   };
 
-  useEffect(() => {
-    console.log(visibleData);
-    
-  },[visibleData])
+  // useEffect(() => {
+  //   console.log(data);
+
+  // },[data])
 
   return (
     <>

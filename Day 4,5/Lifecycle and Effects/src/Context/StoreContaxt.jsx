@@ -4,19 +4,23 @@ export const StoreContaxt = createContext(null);
 
 const StoreContaxtProvider = (props) => {
   const { children } = props;
-  const [dark, setDark] = useState(localStorage.getItem("theam"));
+  const [theam, setTheam] = useState(localStorage.getItem("theam") || "light");
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    localStorage.setItem("theam", dark);
-  }, [dark]);
+    localStorage.setItem("theam", theam);
+  }, [theam]);
+
+  // useEffect(() => {
+  //   localStorage.setItem("theam", dark);
+  // }, [dark]);
 
   const a = "fghjkl;'"
   const contaxtValue = {
     search,
     setSearch,
-    dark,
-    setDark,
+    theam, 
+    setTheam,
     a
   };
 

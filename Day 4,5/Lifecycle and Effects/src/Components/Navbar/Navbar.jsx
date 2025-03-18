@@ -4,15 +4,19 @@ import { StoreContaxt } from "../../Context/StoreContaxt";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const { setSearch, setDark, dark,a } = useContext(StoreContaxt);
-console.log(a);
+  const { setSearch, theam, setTheam, a } = useContext(StoreContaxt);
+  console.log(a);
 
+  /**
+   * @returns {Promise<void>} set them base on checkbox checked or not
+   * @param {*} e
+   */
   const handelTheam = (e) => {
     console.log(e.target.checked);
     if (e.target.checked) {
-      setDark(false);
+      setTheam("dark");
     } else {
-      setDark(true);
+      setTheam("light");
     }
   };
 
@@ -41,14 +45,15 @@ console.log(a);
           <Link to="/Contact-Us">Contact-Us</Link>
         </p>
       </div>
-      <div className="theam">
-        <div class="toggle-switch">
-          <label class="switch-label">
-            <input type="checkbox" class="checkbox" onClick={handelTheam}/>
-            <span class="slider"></span>
-          </label>
-        </div>
+      <div>
+        <input
+          type="checkbox"
+          class="theme-checkbox"
+          checked={theam == "dark" ? true : false}
+          onClick={handelTheam}
+          />
       </div>
+          <span>theam:{theam}</span>
     </div>
   );
 };

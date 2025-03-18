@@ -34,6 +34,6 @@ signUp.addEventListener("click",(e) => {
     localStorage.setItem("users",JSON.stringify(users))
 
     window.location.href = "./home.html"
-   document.cookie = `firstname=${user.firstName}`
+    document.cookie = `firstname=${user.firstName}`
 
 })

@@ -33,10 +33,10 @@ const App = () => {
   };
   
   useEffect(() => {
-    const todos = JSON.parse(localStorage.getItem("todos"))
-    console.log("dfhuh",todos);
+    const item = JSON.parse(localStorage.getItem("todos"))
+    console.log("dfhuh",item);
     if(todos.length > 0){
-      setTodos(todos)
+      setTodos(item)
     }
   },[])
   
@@ -58,7 +58,7 @@ const App = () => {
         <div className="todos">
           {todos.length <= 0 && (
             <>
-              <p>todos not found</p>
+              <p>todos not found.</p>
             </>
           )}
           {todos.map((todo,index) => {
