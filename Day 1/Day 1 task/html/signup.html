@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <p>Sign up</p>
+        <form action="">
+            <div class="left-side">
+                <div class="container">
+                    <label for="Firstname">Firstname</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="Enter Firstname here">
+                </div>
+                <div class="container">
+                    <label for="LastName">LastName</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Enter LastName here">
+                </div>
+                <div class="container">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email here">
+                </div>
+                <div class="container">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="container">
+                    <label for="DOB">Date of Birth</label>
+                    <input type="date" name="DOB" id="DOB" placeholder="Enter DOB here">
+                </div>
+
+                <div class="container">
+                    <label for="Hobbies">Hobbies</label>
+                    <textarea name="" id=""></textarea>
+                </div>
+                <div class="container">
+                    <label for="email">Phone</label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter Phone here">
+                </div>
+
+                <div class="container">
+                    <label for="email">city</label>
+                    <select name="city" id="city">
+                        <option value="">select city</option>
+                        <option value="Rajkot">Rajkot</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Gandhinagr">Gandhinagr</option>
+                        <option value="Bhavnagar">Bhavnagar</option>
+                    </select>
+                </div>
+
+
+            </div>
+
+            <div class="bottom-div">
+                <div class="gender-div">
+                    <div class="gender-label">
+                        <label for="gender">Gender</label>
+                    </div>
+                    <div class="gender-input">
+                        <input type="radio" name="gender" class="gender" id="male" value="male">
+                        <label for="male">male</label>
+                        <input type="radio" name="gender" class="gender" id="female" value="female">
+                        <label for="female">female</label>
+                        <input type="radio" name="gender" class="gender" id="other" value="other">
+                        <label for="other">other</label>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <button id="signUp" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="../js/signup.js"></script>
+
+</html>

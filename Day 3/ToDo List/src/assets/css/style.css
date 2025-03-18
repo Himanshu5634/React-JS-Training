@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container {
+  padding: 2rem 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #80CBC4;
+  width: 100%;
+}
+body .container .form-container {
+  width: 30vw;
+}
+body .container .form-container .error {
+  margin-bottom: 8px;
+  color: red;
+}
+body .container .form-container form {
+  width: 100%;
+}
+body .container .form-container form input {
+  width: 85%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5px 0px 0px 5px;
+}
+body .container .form-container form button {
+  width: 15%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #FFB433;
+  border-radius: 0px 5px 5px 0px;
+}
+body .container .todos {
+  width: 100%;
+  margin-top: 15px;
+}
+body .container .todos .todo {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+body .container .todos .todo .todo-id {
+  font-size: 1.2rem;
+  width: 5%;
+}
+body .container .todos .todo .todo-contant {
+  display: flex;
+  font-size: 1.2rem;
+  width: 65%;
+}
+body .container .todos .todo .todo-contant .todo-check {
+  width: 20%;
+}
+body .container .todos .todo .todo-contant .todo-check input {
+  width: 15px;
+  height: 15px;
+}
+body .container .todos .todo .todo-contant .todo-edit {
+  width: 80%;
+}
+body .container .todos .todo .todo-contant .todo-edit input {
+  width: 100%;
+  padding: 5px;
+}
+body .container .todos .todo .todo-contant .todo-edit .completed {
+  text-decoration: line-through;
+}
+body .container .todos .todo .todo-actions {
+  width: 30%;
+}
+body .container .todos .todo .todo-actions button {
+  padding: 10px;
+  margin-left: 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 10px;
+  background-color: #FBF8EF;
+}
+body .container .todos .todo .todo-actions .btn-edit:hover {
+  background-color: #FFB4A2;
+  color: white;
+}
+body .container .todos .todo .todo-actions .btn-delete:hover {
+  background-color: black;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

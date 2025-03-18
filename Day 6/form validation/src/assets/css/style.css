@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* .container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* .container .form-container {
+  width: 30vw;
+  border: 1px solid black;
+  padding: 1rem;
+}
+* .container .form-container form {
+  width: 100%;
+}
+* .container .form-container form input {
+  width: 100%;
+  padding: 10px;
+}
+* .container .form-container form .input-row .label {
+  margin: 10px 0px 5px 0px;
+}
+* .container .form-container form .input-row .error {
+  display: block;
+  color: red;
+}
+* .container .form-container form .signup-btn {
+  width: 100%;
+  margin-top: 20px;
+}
+* .container .form-container form .signup-btn button {
+  width: 100%;
+  padding: 8px;
+}
+
+/*# sourceMappingURL=style.css.map */

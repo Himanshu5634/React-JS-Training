@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container{
+        padding: 2rem 1rem;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: #80CBC4;
+        width: 100%;
+
+        .form-container{
+            width: 30vw;
+
+            .error{
+                margin-bottom: 8px;
+                color: red;
+            }
+
+            form{
+                width: 100%;
+
+                input{
+                    width: 85%;
+                    padding: 0.5rem;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px 0px 0px 5px;
+                }
+
+                button{
+                    width: 15%;
+                    padding: 0.5rem;
+                    border: none;
+                    background-color: #FFB433;
+                    border-radius: 0px 5px 5px 0px;
+                }
+            }
+        }
+
+        .todos{
+            width: 100%;
+            margin-top: 15px;
+
+            .todo{
+                display: flex;
+                width: 100%;
+                margin-bottom: 15px;
+
+                .todo-id{
+                    font-size: 1.2rem;
+                    width: 5%;
+                }
+
+                .todo-contant{
+                    display: flex;
+                    font-size: 1.2rem;
+                    width: 65%;
+
+                    .todo-check{
+                        width: 20%;
+                        
+                        input{
+                            width: 15px;
+                            height: 15px;
+                        }   
+                    }
+
+                    .todo-edit{
+                        width: 80%;
+                        input{
+                            width: 100%;
+                            padding: 5px;
+                        }
+
+                        .completed{
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+
+                .todo-actions{
+                    width: 30%;
+
+                    button{
+                        padding: 10px;
+                        margin-left: 14px;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 10px;
+                        background-color: #FBF8EF;
+                    }
+                    
+                    .btn-edit:hover{
+                        background-color: #FFB4A2;
+                        color: white;
+                    }
+
+                    .btn-delete:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

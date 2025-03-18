@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+body .form-container {
+  border: 1px solid black;
+  padding: 2rem;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+body p {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+body form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+body form .left-side, body form .right-side {
+  width: 49%;
+}
+body form .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+}
+body form .container input {
+  width: 100%;
+  padding: 8px;
+}
+body form .container select {
+  padding: 8px;
+}
+body form .bottom-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body form .bottom-div .gender-div {
+  margin-bottom: 1rem;
+}
+body form .bottom-div .gender-div .gender-label {
+  margin-bottom: 5px;
+}
+body form .button {
+  width: 100%;
+}
+body form .button button {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  border: none;
+  background-color: #000;
+  color: #ffffff;
+  border-radius: 2px;
+}
+body span {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  body .form-container {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
