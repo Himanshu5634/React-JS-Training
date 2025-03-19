@@ -4,8 +4,7 @@ import { StoreContaxt } from "../../Context/StoreContaxt";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const { setSearch, theam, setTheam, a } = useContext(StoreContaxt);
-  console.log(a);
+  const { setSearch, theam, setTheam } = useContext(StoreContaxt);
 
   /**
    * @returns {Promise<void>} set them base on checkbox checked or not

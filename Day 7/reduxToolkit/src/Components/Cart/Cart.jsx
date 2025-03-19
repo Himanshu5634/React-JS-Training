@@ -45,7 +45,7 @@ const Cart = () => {
                   <p> {cartItem.productPrice}</p>
                 </div>
                 <div className="item-quantity">
-                 <button onClick={() => handleQuantity(cartItem.productId,"plus")}>+</button> <p> {cartItem.quantity}</p> <button onClick={() => handleQuantity(cartItem.id,"desc")}>-</button>
+                 <button onClick={() => handleQuantity(cartItem.id,"plus")}>+</button> <p> {cartItem.quantity}</p> <button onClick={() => handleQuantity(cartItem.id,"desc")}>-</button>
                 </div>
                 <div className="item-total-price">
                 <p>total : {cartItem.productPrice * cartItem.quantity}</p>

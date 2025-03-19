@@ -3,9 +3,9 @@ import { useState } from "react";
 import TodoItem from "./Components/ListTodo/TodoItem";
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState( JSON.parse(localStorage.getItem("todos")) || []);
   const [error,setError] = useState("")
-
+  const [todo,setTodo] = useState("")
   /**
    * 
    * @param {*} "e" 
@@ -14,31 +14,25 @@ const App = () => {
   const handleSubmit = (e) => {
     try {
       e.preventDefault();
-      let todo = document.getElementById("todo");
-      if (todo.value == "") {
+
+      if (todo.length <= 0 ) {
         setError("please enter todo first*");
         return
       }
       const newTodo = {
         id: parseInt(Math.random()*100),
-        todo: todo.value,
+        todo: todo,
         completed: false,
       };
       setTodos([...todos, newTodo]);
       setError("")
-      todo.value = ""
+      setTodo("")
     } catch (error) {
       console.log(error);
     }
   };
   
-  useEffect(() => {
-    const item = JSON.parse(localStorage.getItem("todos"))
-    console.log("dfhuh",item);
-    if(todos.length > 0){
-      setTodos(item)
-    }
-  },[])
+
   
   useEffect(() => {
     localStorage.setItem("todos",JSON.stringify(todos))
@@ -51,7 +45,7 @@ const App = () => {
         <div className="form-container">
           <div className="error">{error}</div>
           <form action="" onSubmit={handleSubmit}>
-            <input type="text" name="todo" id="todo" placeholder="Enter here..."/>
+            <input type="text" name="todo" id="todo" value={todo} onChange={(e) => setTodo(e.target.value)} placeholder="Enter here..."/>
             <button type="submit">add</button>
           </form>
         </div>

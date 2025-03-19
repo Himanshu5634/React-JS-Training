@@ -29,30 +29,32 @@ export const cartSlice = createSlice({
      */
     addToCart: (state, action) => {
       try {
-        // console.log(action,"adca");
+        console.log(action.payload,"adca");
         
         const cartItem = state.cartItems.find(
-          (cartItem) => cartItem.productId === action.payload       
+          (cartItem) => cartItem.id === action.payload       
         );
         
           if (cartItem) {
           state.cartItems = state.cartItems.map((cartItem) =>
-            cartItem.productId == action.payload
+            cartItem.id == action.payload
               ? { ...cartItem, quantity: cartItem.quantity + 1 }
               : cartItem
           );
         } else {
-          const product = state.products.find((product) => product.id === action.payload)
-          console.log(product,"product");
+          console.log(action.payload);
           
-          const newCartItem = {
-            id: nanoid(),
-            productId : product.id,
-            productName: product.productName,
-            quantity: 1,
-            productPrice: product.productPrice,
-          };
-          state.cartItems.push(newCartItem);
+          // const product = state.products.find((product) => product.id === action.payload)
+          // console.log(product,"product");
+          
+          // const newCartItem = {
+          //   id: nanoid(),
+          //   productId : product.id,
+          //   productName: product.productName,
+          //   quantity: 1,
+          //   productPrice: product.productPrice,
+          // };
+          state.cartItems.push({...action.payload,quantity : 1,cartID : nanoid()});
         }
       
       } catch (error) {

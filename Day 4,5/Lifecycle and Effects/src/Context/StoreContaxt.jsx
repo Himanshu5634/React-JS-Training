@@ -15,13 +15,12 @@ const StoreContaxtProvider = (props) => {
   //   localStorage.setItem("theam", dark);
   // }, [dark]);
 
-  const a = "fghjkl;'"
+
   const contaxtValue = {
     search,
     setSearch,
     theam, 
     setTheam,
-    a
   };
 
   return (

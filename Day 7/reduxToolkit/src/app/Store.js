@@ -4,3 +4,5 @@ import cartReducer from "../Features/Cart/CartSlice"
 export const store = configureStore({
    reducer: cartReducer
 }) 
+
+

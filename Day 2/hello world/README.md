@@ -1,8 +1,16 @@
-# React + Vite
+### Task 3: **Hello World**
+- Set up a basic React project and render a "Hello World" message.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Features:
+- Set up a React environment from scratch.
+- Render a "Hello World" message using React components.
+- Understand the basics of JSX and ReactDOM.
+- Provide a foundation for learning React concepts.
 
-Currently, two official plugins are available:
+### How to Run the Code:
+1. Open the project folder in your code editor (e.g., Visual Studio Code).
+2. Run `npm install` to install all the required dependencies.
+3. Run `npm run dev` to start the development server.
+4. Open the provided local development URL in your browser to interact with the app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---

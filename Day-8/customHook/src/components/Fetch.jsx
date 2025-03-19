@@ -10,6 +10,12 @@ const Fetch = () => {
   //   const [error, setError] = useState(false);
 
   const { data, error, loading, fetchData } = useFetch(url, method, payload);
+
+  /**
+   * @description 
+   * @returns {Function} fetchData function
+   * @param {*} e 
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchData();

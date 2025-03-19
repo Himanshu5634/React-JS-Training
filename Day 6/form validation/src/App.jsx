@@ -8,6 +8,7 @@ import {
   lowercaseAlphabats,
   spacialCharacter,
   numberRegex,
+  phoneNumberRegex,
 } from "./utils/regex";
 
 const initialState = {
@@ -20,12 +21,7 @@ const initialState = {
 function App() {
   const [data, setData] = useState(initialState);
 
-  const [errors, setErrors] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    password: "",
-  });
+  const [errors, setErrors] = useState(initialState);
 
   /***
    * @description - change state of data
@@ -60,10 +56,8 @@ function App() {
     //phone error conditions
     if (!phone.trim()) {
       newErrorsObj.phone = "please enter  phone number";
-    } else if (isNaN(phone.trim())) {
-      newErrorsObj.phone = "please enter valid Phone number";
-    } else if (phone.length != 10) {
-      newErrorsObj.phone = "Phone number must have 10 digits";
+    }  else if (!phoneNumberRegex.test(phone.trim())){
+      newErrorsObj.phone = "please enter valid Phone number...";
     }
 
     //password error conditions
@@ -97,74 +91,54 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
   return (
     <>
       <div className="container">
         <div className="form-container">
           <form action="" name="myForm" onSubmit={handelSubmit}>
             <div className="input-row">
-              <div className="label">
-                <label htmlFor="name">Name</label>
-              </div>
               <InputField
                 type="text"
                 id="name"
+                name = "name"
                 placeholder="Enter name here"
                 data={data}
                 handelChange={handleChange}
+                error={errors}
               />
-              <span className={errors.name ? "error" : ""}>{errors.name}</span>
             </div>
             <div className="input-row">
-              <div className="label">
-                <label htmlFor="email">Email</label>
-              </div>
               <InputField
                 type="text"
                 id="email"
+                name = "email"
                 placeholder="Enter email here"
                 data={data}
                 handelChange={handleChange}
+                error={errors}
               />
-
-              <span className={errors.email ? "error" : ""}>
-                {errors.email}
-              </span>
             </div>
             <div className="input-row">
-              <div className="label">
-                <label htmlFor="phone">Phone</label>
-              </div>
               <InputField
                 type="text"
                 id="phone"
+                name = "phone"
                 placeholder="Enter phone here"
                 data={data}
                 handelChange={handleChange}
+                error={errors}
               />
-
-              <span className={errors.phone ? "error" : ""}>
-                {errors.phone}
-              </span>
             </div>
             <div className="input-row">
-              <div className="label">
-                <label htmlFor="password">Password</label>
-              </div>
               <InputField
                 type="password"
                 id="password"
+                name = "password"
                 placeholder="Enter password here"
                 data={data}
                 handelChange={handleChange}
+                error={errors}
               />
-
-              <span className={errors.password ? "error" : ""}>
-                {errors.password}
-              </span>
             </div>
 
             <div className="signup-btn">

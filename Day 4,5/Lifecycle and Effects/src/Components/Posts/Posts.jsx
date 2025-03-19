@@ -12,7 +12,7 @@ const Posts = ({ post }) => {
         <p>{post.title}</p>
       </div>
       <div className="post-link">
-        <Link to={`/post/${post.id}`}>view more..</Link>
+        <Link to={`/post/${encodeURI(post.id)}`}>view more..</Link>
       </div>
     </>
   );

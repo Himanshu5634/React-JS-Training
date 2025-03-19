@@ -1,12 +1,57 @@
-# React + Vite
+# Day 4 & 5 - Lifecycle and Effects
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview:
+Day 4 and 5 focus on understanding React's component lifecycle and implementing side effects using hooks like `useEffect`. The tasks include fetching data from a public API, creating a multi-page application with `React Router`, and implementing a `theme-switching` feature using the Context API.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project: Fetch and Theme-Switching App
 
-## Expanding the ESLint configuration
+### Description:
+This project demonstrates the use of React's lifecycle methods and hooks to fetch data, manage state, and create a dynamic, multi-page application. It also includes a theme-switching feature that allows users to toggle between light and dark themes.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features:
+1. **Fetch Data**:
+   - Fetch data from a public API (e.g., JSONPlaceholder) and display a list of posts.
+   - Show a loading message while the data is being fetched.
+
+2. **Search Functionality**:
+   - Add a search bar to filter the posts dynamically.
+
+3. **Multi-Page Application**:
+   - Create a multi-page app with three pages: Home, About, and Contact.
+   - Use React Router for navigation between pages.
+
+4. **Dynamic Blog Routes**:
+   - Add dynamic routes for a Blog section (e.g., `/blog/:id`) to display individual blog posts.
+
+5. **Theme-Switching Feature**:
+   - Implement a theme-switching feature with light and dark themes.
+   - Use the Context API to toggle and share the theme across components.
+   - Persist the theme choice in `localStorage` for a consistent user experience.
+
+---
+
+## How to Run the Code:
+1. Open the project folder in your code editor (e.g., Visual Studio Code).
+2. Run `npm install` to install all the required dependencies.
+3. Run `npm run dev` to start the development server.
+4. Open the provided local development URL in your browser to interact with the app.
+
+---
+
+## Key Dependencies:
+- **React**: For building the user interface.
+- **React Router**: For implementing navigation and dynamic routes.
+- **Context API**: For managing global state (theme switching).
+- **Fetch**: For making API requests (optional, if used).
+
+---
+
+## Additional Notes:
+- Ensure that the API endpoint (e.g., JSONPlaceholder) is accessible while running the project.
+- The theme-switching feature persists the user's choice in `localStorage`, so the selected theme will remain consistent across sessions.
+
+---
