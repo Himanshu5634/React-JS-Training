@@ -39,9 +39,9 @@ a{
         li:after{
             content: "";
             width: 0%;
-            height: 4px;
+            height: 3px;
             background-color: transparent;
-            margin: auto;
+            margin-top: auto;
             display: block;
             transition: all 0.5s ease ;
         }
